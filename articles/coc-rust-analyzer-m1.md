@@ -6,7 +6,7 @@ topics: ["NeoVim", "Tech", "Vim", "Rust"]
 published: true
 ---
 # 現象
-coc.nvim + coc-rust-analyzerでRustを書いていたら、一部のコードで定義ジャンプできない現象が発生しました。
+coc.nvim extensionのcoc-rust-analyzerで一部のコードで定義ジャンプできない現象が発生しました。
 例:
 ```rust
 #[derive(Debug, StructOpt)]
@@ -21,7 +21,7 @@ fn main() {
   let mut args = Args::from_args();
 }
 ```
-この時点で使用しているrust-analyzerはcoc-rust-analyzerを入れるとデフォルトでダウンロードされるやつを使っています。
+この時点で使用しているrust-analyzerはcoc-rust-analyzerを入れるとデフォルトでダウンロードされるものを使っています。
 VSCodeで、VSCode上からダウンロードされたrust-analyzerを使うと定義ジャンプは問題なくできました。
 
 `:CocCommand rust-analyzer.serverVersion`でrust-analyzerのバージョンを見てみると
@@ -92,7 +92,7 @@ arm64
 予想通り、nodeのバージョンが原因になってそうです。
 
 # 対処法
-グローバルのバージョンをnode16以上に固定し、rust-analyzerをcoc-rust-analyzerを再インストールします。
+グローバルのバージョンをnode16以上に固定し、cocからrust-analyzerを再インストールします。
 インストール済みのものは`~/.config/coc/extensions/coc-rust-analyzer-data/rust-analyzer`に入っているのでこれを消します。
 ```sh
 rm ~/.config/coc/extensions/coc-rust-analyzer-data/rust-analyzer
