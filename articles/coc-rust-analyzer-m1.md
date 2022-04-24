@@ -3,7 +3,7 @@ title: "M1 Macでcoc-rust-analyzerが一部機能しない場合"
 emoji: "🐡"
 type: "tech"
 topics: ["NeoVim", "Tech", "Vim", "Rust"]
-published: false
+published: true
 ---
 # 現象
 coc.nvim + coc-rust-analyzerでRustを書いていたら、一部のコードで定義ジャンプできない現象が発生しました。
