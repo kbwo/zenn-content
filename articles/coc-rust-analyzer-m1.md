@@ -105,9 +105,12 @@ rust-analyzer is not found, download from GitHub release?:
 Type number and <Enter> or click with the mouse (q or empty cancels):
 ```
 インストール後、定義ジャンプは正常に機能するようになりました。
-この現象に対応するPRをcoc-rust-analyzer出そうかと思いましたが、process.arch使わないと汚いコードで対応しなきゃいけなくなりそうな予感がしたので、該当現象と対処法をドキュメントに残すissueでも立てて検討してもらおうかと思います。
+この現象に対応するPRをcoc-rust-analyzer出そうかと思いましたが、process.archではなく外部コマンドを叩いたりしても正しくCPUアーキテクチャの取得を行えなかったので、該当現象と対処法をドキュメントに残すissueでも立てて検討してもらおうかと思います。
 
 # 備考
 - [node 15.5.1](https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V15.md#15.5.1)以降のバージョンなら問題なく動きそうです。
 - 私はnodeバージョンマネージャとして[volta](https://github.com/volta-cli/volta)を使っているので、グローバルはv16にしてv14とか使いたいときは`volta pin node@14`でローカルのnodeバージョン固定することにしました。
+
+# 追記
+- [READMEに記載していただきました](https://github.com/fannheyward/coc-rust-analyzer/commit/02a56d101fe13df7af0f2cc71b65459b5df4ac3c)
 
