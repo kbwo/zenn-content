@@ -53,7 +53,7 @@ let articles = query
             sub_article.field(schema::articles::id)
             .eq(schema::articles::id)
         )
-    ).filter(query_2)
+    ).filter(exists(query_2))
     .load(connection);
 ```
 
