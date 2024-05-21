@@ -3,7 +3,7 @@ title: "Diesel ORM 動的なクエリ発行ハック"
 emoji: "🕌"
 type: "tech"
 topics: ["Rust", "diesel", "SQL"]
-published: false
+published: true
 ---
 
 # 背景・問題
